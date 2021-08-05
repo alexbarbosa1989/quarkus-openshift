@@ -39,6 +39,13 @@ openjdk-11   default-route-openshift-image-registry.my-openshift-cluster.com/qua
 ~~~
 oc new-app openjdk-11 https://github.com/alexbarbosa1989/quarkus-openshift.git --name=quarkus-test-app
 ~~~
+OPTIONAL: verify that the new image stream is created:
+~~~
+oc get is
+NAME               IMAGE REPOSITORY                                                                                    TAGS      UPDATED
+openjdk-11         default-route-openshift-image-registry.apps.my-openshift-cluster.com/quarkus-lab/openjdk-11         latest    5 minutes ago
+quarkus-test-app   default-route-openshift-image-registry.apps.my-openshift-cluster.com/quarkus-lab/quarkus-test-app   latest  
+~~~
 
 # OPTION 2: Deploying as a Java Application
 
