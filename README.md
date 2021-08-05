@@ -48,6 +48,7 @@ openjdk-11         default-route-openshift-image-registry.apps.my-openshift-clus
 quarkus-test-app   default-route-openshift-image-registry.apps.my-openshift-cluster.com/quarkus-lab/quarkus-test-app   latest  
 ~~~
 
+#
 # OPTION 2: Deploying as a Java Application
 
 1. Login into Openshift cluster:
