@@ -24,7 +24,12 @@ Using project "quarkus-lab" on server "https://YOUR_OCP_CLUSTER_ADDRESS:6443".
 git clone https://github.com/alexbarbosa1989/quarkus-openshift.git
 ~~~
 
-5. (Optional) Verify the Openshift properties added in the `application.properties` file, located in src/main/resources/application.properties:
+5. Add execution permissions for `mvnw` file:
+~~~
+chmod +x mvnw
+~~~
+
+6. (Optional) Verify the Openshift properties added in the `application.properties` file, located in src/main/resources/application.properties:
 ~~~
 quarkus.openshift.build-strategy=docker
 quarkus.openshift.expose=true
@@ -33,12 +38,12 @@ quarkus.kubernetes-client.trust-certs=true
 
 Those properties enables the deployment process as image stream into Openshift.
 
-6. Deploy the project into the openshift cluster:
+7. Deploy the project into the openshift cluster:
 ~~~
 ./mvnw clean package -Dquarkus.kubernetes.deploy=true
 ~~~
 
-7. Verify the deployment in the Openshift namespace:
+8. Verify the deployment in the Openshift namespace:
 ~~~
 oc get pods
 ~~~
