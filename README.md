@@ -35,6 +35,10 @@ NAME         IMAGE REPOSITORY                                                   
 openjdk-11   default-route-openshift-image-registry.my-openshift-cluster.com/quarkus-lab/openjdk-11   latest    7 seconds ago
 ~~~
 
+7. Build the quarkus project using the openjdk-11 image as base:
+~~~
+oc new-app openjdk-11 https://github.com/alexbarbosa1989/quarkus-openshift.git --name=quarkus-test-app
+~~~
 
 # OPTION 2: Deploying as a Java Application
 
