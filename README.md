@@ -21,7 +21,8 @@ Using project "quarkus-lab" on server "https://YOUR_OCP_CLUSTER_ADDRESS:6443".
 
 4. (Optional) Verify the .s2i/environment file contains:
 ~~~
-ARTIFACT_COPY_ARGS=-p -r lib/ *-runner.jar
+MAVEN_S2I_ARTIFACT_DIRS=target
+S2I_SOURCE_DEPLOYMENTS_FILTER=*-runner.jar lib
 ~~~
 
 5. Import the OpenJDK11 image that is the base for the quarkus project:
