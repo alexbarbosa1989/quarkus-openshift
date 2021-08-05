@@ -1,7 +1,32 @@
 # quarkus-openshift
 Basic quarkus native app deployment in Openshift
 
-# OPTION 1: Deploying as a Java Application
+# OPTION 1: Deploying using s2i method
+
+1. Login into Openshift cluster:
+~~~
+oc login -u YOUR_USER -p YOUR_PASSWORD https://YOUR_OCP_CLUSTER_ADDRESS:6443
+~~~
+
+2. Create a new openshift project (if does not exists):
+~~~
+ oc new-project quarkus-lab
+~~~
+
+3. (Optional) Verify that you are currently located into the created project:
+~~~
+oc project
+Using project "quarkus-lab" on server "https://YOUR_OCP_CLUSTER_ADDRESS:6443".
+~~~
+
+4. (Optional) Verify the .s2i/environment file contains:
+~~~
+ARTIFACT_COPY_ARGS=-p -r lib/ *-runner.jar
+~~~
+
+
+
+# OPTION 2: Deploying as a Java Application
 
 1. Login into Openshift cluster:
 ~~~
