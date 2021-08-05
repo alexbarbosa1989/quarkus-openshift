@@ -37,3 +37,17 @@ Those properties enables the deployment process as image stream into Openshift.
 ~~~
 ./mvnw clean package -Dquarkus.kubernetes.deploy=true
 ~~~
+
+7. Verify the deployment in the Openshift namespace:
+~~~
+oc get pods
+~~~
+The output should looks like below:
+~~~
+NAME                     READY     STATUS      RESTARTS   AGE
+quarkust-test-1-build    0/1       Completed   0          2m16s
+quarkust-test-1-deploy   0/1       Completed   0          25s
+quarkust-test-1-g544s    1/1       Running     0          22s
+~~~
+
+ 
