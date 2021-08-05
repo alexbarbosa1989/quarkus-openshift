@@ -24,6 +24,16 @@ Using project "quarkus-lab" on server "https://YOUR_OCP_CLUSTER_ADDRESS:6443".
 ARTIFACT_COPY_ARGS=-p -r lib/ *-runner.jar
 ~~~
 
+5. Import the OpenJDK11 image that is the base for the quarkus project:
+~~~
+oc import-image --confirm ubi8/openjdk-11 --from=registry.access.redhat.com/ubi8/openjdk-11
+~~~
+OPTIONAL: verify the image stream in the quarkus-lab namespace:
+~~~
+oc get is
+NAME         IMAGE REPOSITORY                                                                         TAGS      UPDATED
+openjdk-11   default-route-openshift-image-registry.my-openshift-cluster.com/quarkus-lab/openjdk-11   latest    7 seconds ago
+~~~
 
 
 # OPTION 2: Deploying as a Java Application
