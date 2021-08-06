@@ -57,3 +57,6 @@ quarkust-test-1-g544s    1/1       Running     0          22s
 ~~~
 oc get route
 ~~~
+~~~
+curl https://EXPOSED_ROUTE/hello
+~~~
