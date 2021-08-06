@@ -53,4 +53,7 @@ quarkust-test-1-deploy   0/1       Completed   0          25s
 quarkust-test-1-g544s    1/1       Running     0          22s
 ~~~
 
- 
+9. Test the service in the exposed route:
+~~~
+oc get route
+~~~
